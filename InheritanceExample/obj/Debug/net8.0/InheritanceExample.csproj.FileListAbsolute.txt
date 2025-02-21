@@ -130,3 +130,4 @@ C:\Users\welcome\source\repos\C43-G05-EF03\InheritanceExample\obj\Debug\net8.0\r
 C:\Users\welcome\source\repos\C43-G05-EF03\InheritanceExample\obj\Debug\net8.0\InheritanceExample.pdb
 C:\Users\welcome\source\repos\C43-G05-EF03\InheritanceExample\obj\Debug\net8.0\InheritanceExample.genruntimeconfig.cache
 C:\Users\welcome\source\repos\C43-G05-EF03\InheritanceExample\obj\Debug\net8.0\ref\InheritanceExample.dll
+C:\Users\welcome\source\repos\C43-G05-EF03\InheritanceExample\obj\Debug\net8.0\InheritanceExample.sourcelink.json
