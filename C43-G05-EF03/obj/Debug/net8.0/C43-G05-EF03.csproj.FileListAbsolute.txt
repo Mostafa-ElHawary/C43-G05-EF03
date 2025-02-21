@@ -124,6 +124,7 @@ C:\Users\welcome\source\repos\C43-G05-EF03\C43-G05-EF03\obj\Debug\net8.0\C43-G05
 C:\Users\welcome\source\repos\C43-G05-EF03\C43-G05-EF03\obj\Debug\net8.0\C43-G05-EF03.AssemblyInfoInputs.cache
 C:\Users\welcome\source\repos\C43-G05-EF03\C43-G05-EF03\obj\Debug\net8.0\C43-G05-EF03.AssemblyInfo.cs
 C:\Users\welcome\source\repos\C43-G05-EF03\C43-G05-EF03\obj\Debug\net8.0\C43-G05-EF03.csproj.CoreCompileInputs.cache
+C:\Users\welcome\source\repos\C43-G05-EF03\C43-G05-EF03\obj\Debug\net8.0\C43-G05-EF03.sourcelink.json
 C:\Users\welcome\source\repos\C43-G05-EF03\C43-G05-EF03\obj\Debug\net8.0\C43-G05-.7C7C71EC.Up2Date
 C:\Users\welcome\source\repos\C43-G05-EF03\C43-G05-EF03\obj\Debug\net8.0\C43-G05-EF03.dll
 C:\Users\welcome\source\repos\C43-G05-EF03\C43-G05-EF03\obj\Debug\net8.0\refint\C43-G05-EF03.dll

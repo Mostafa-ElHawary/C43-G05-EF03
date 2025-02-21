@@ -43,10 +43,10 @@ namespace InheritanceExample
                     Salary = 90000,
                 };
 
-                //context.FullTimeEmployees.Add(fullTime);
-                //context.FullTimeEmployees.Add(fullTime2);
-                //context.FullTimeEmployees.Add(fullTime3);
-                //context.FullTimeEmployees.Add(fullTime4);
+                context.FullTimeEmployees.Add(fullTime);
+                context.FullTimeEmployees.Add(fullTime2);
+                context.FullTimeEmployees.Add(fullTime3);
+                context.FullTimeEmployees.Add(fullTime4);
 
                 PartTimeEmployees partTime1 = new PartTimeEmployees()
                 {
@@ -76,17 +76,17 @@ namespace InheritanceExample
                     HourlyRate = 80,
                 };
 
-                //context.PartTimeEmployees.Add(partTime1);
-                //context.PartTimeEmployees.Add(partTime2);
-                //context.PartTimeEmployees.Add(partTime3);
-                //context.PartTimeEmployees.Add(partTime4);
+                context.PartTimeEmployees.Add(partTime1);
+                context.PartTimeEmployees.Add(partTime2);
+                context.PartTimeEmployees.Add(partTime3);
+                context.PartTimeEmployees.Add(partTime4);
 
                 //context.Employees.Add(partTime1);
                 //context.Employees.Add(partTime2);
                 //context.Employees.Add(partTime3);
                 //context.Employees.Add(partTime4);
 
-                //context.SaveChanges();
+                context.SaveChanges();
 
                 //foreach (var part in context.Employees)
                 //{
@@ -94,6 +94,13 @@ namespace InheritanceExample
                 //}
                 //context.Employees.Where(e => e is PartTimeEmployees)
                 //    .ToList().ForEach(e => Console.WriteLine(e.Name));
+
+                //Note: EF Core Don't Loading Any Navigational Propery
+                //EF Core Loading Navigational Propery
+
+                // 1.Explicit Loading
+                //2.Eager Loading
+                //3.Lazing Loading
             }
         }
 
