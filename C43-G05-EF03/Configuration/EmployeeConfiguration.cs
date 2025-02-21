@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using C43_G05_EF03.Entities;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.EntityFrameworkCore;
 
 namespace C43_G05_EF03.Configuration
 {
@@ -13,13 +13,12 @@ namespace C43_G05_EF03.Configuration
     {
         public void Configure(EntityTypeBuilder<Employee> builder)
         {
-            builder.HasKey(e => e.Id);
-            builder.Property(e => e.Name).IsRequired().HasMaxLength(100);
-            builder.Property(e => e.Position).IsRequired().HasMaxLength(100);
-            builder.HasDiscriminator<string>("EmployeeType")
-                   .HasValue<FullTimeEmployees>("FullTime")
-                   .HasValue<PartTimeEmployees>("PartTime");
-            // Add other property configurations as needed
+            builder.HasKey(e => e.EmployeeId);
+            builder.Property(e => e.FirstName).IsRequired().HasMaxLength(50);
+            builder.Property(e => e.LastName).IsRequired().HasMaxLength(50);
+            builder.HasOne(e => e.Department)
+                   .WithMany(d => d.Employees)
+                   .HasForeignKey(e => e.DepartmentId);
         }
     }
 }

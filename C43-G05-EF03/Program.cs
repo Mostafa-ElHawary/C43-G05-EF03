@@ -1,98 +1,33 @@
-﻿using System;
-using C43_G05_EF03.Context;
+﻿using C43_G05_EF03.Context;
 using C43_G05_EF03.Entities;
 
 namespace C43_G05_EF03
 {
     internal class Program
     {
-        // 3 WAYS To Generate schema
-        // TPC 
-        // TPH
-        // TPCC
         static void Main(string[] args)
         {
+            AppDbContext context = new AppDbContext();
 
-            using AppDpContext context = new AppDpContext();
-
-            FullTimeEmployees fullTime = new FullTimeEmployees()
+            List<Department> departments = new List<Department>
             {
-                Name = "Ali",
-                Position = "Hr",
-                Salary = 100000,
-            };
-            FullTimeEmployees fullTime2 = new FullTimeEmployees()
-            {
-                Name = "Sara",
-                Position = "Developer",
-                Salary = 120000,
+                new Department { DepartmentId = 1, Name = "HR" },
+                new Department { DepartmentId = 2, Name = "IT" },
+                new Department { DepartmentId = 3, Name = "Finance" }
             };
 
-            FullTimeEmployees fullTime3 = new FullTimeEmployees()
+            List<Employee> employees = new List<Employee>
             {
-                Name = "Mona",
-                Position = "Manager",
-                Salary = 150000,
+                new Employee { EmployeeId = 1, FirstName = "zidan", LastName = "Doe", DepartmentId = 1 },
+                new Employee { EmployeeId = 2, FirstName = "Jane", LastName = "Smith", DepartmentId = 2 },
+                new Employee { EmployeeId = 3, FirstName = "Bob", LastName = "Johnson", DepartmentId = 3 }
             };
 
-            FullTimeEmployees fullTime4 = new FullTimeEmployees()
-            {
-                Name = "Emma",
-                Position = "Designer",
-                Salary = 90000,
-            };
+            context.Departments.AddRange(departments);
+            context.Employees.AddRange(employees);
 
-            //context.FullTimeEmployees.Add(fullTime);
-            //context.FullTimeEmployees.Add(fullTime2);
-            //context.FullTimeEmployees.Add(fullTime3);
-            //context.FullTimeEmployees.Add(fullTime4);
 
-            PartTimeEmployees partTime1 = new PartTimeEmployees()
-            {
-                Name = "Tom",
-                Position = "Support",
-                HourlyRate = 50,
-            };
-
-            PartTimeEmployees partTime2 = new PartTimeEmployees()
-            {
-                Name = "Jerry",
-                Position = "Tester",
-                HourlyRate = 60,
-            };
-
-            PartTimeEmployees partTime3 = new PartTimeEmployees()
-            {
-                Name = "Anna",
-                Position = "Intern",
-                HourlyRate = 30,
-            };
-
-            PartTimeEmployees partTime4 = new PartTimeEmployees()
-            {
-                Name = "Lucy",
-                Position = "Consultant",
-                HourlyRate = 80,
-            };
-
-            //context.PartTimeEmployees.Add(partTime1);
-            //context.PartTimeEmployees.Add(partTime2);
-            //context.PartTimeEmployees.Add(partTime3);
-            //context.PartTimeEmployees.Add(partTime4);
-
-            //context.Employees.Add(partTime1);
-            //context.Employees.Add(partTime2);
-            //context.Employees.Add(partTime3);
-            //context.Employees.Add(partTime4);
-
-            //context.SaveChanges();
-
-            //foreach (var part in context.Employees)
-            //{
-            //    Console.WriteLine(part.Name);
-            //}
-            //context.Employees.Where(e => e is PartTimeEmployees)
-            //    .ToList().ForEach(e => Console.WriteLine(e.Name));
+            context.SaveChanges();
         }
     }
 }

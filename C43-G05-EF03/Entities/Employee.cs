@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace C43_G05_EF03.Entities
 {
-    public abstract class Employee
+    internal class Employee
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Position { get; set; }
+        public int EmployeeId { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public int DepartmentId { get; set; }
+        public Department Department { get; set; }
     }
 }
